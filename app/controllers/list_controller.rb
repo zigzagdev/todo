@@ -21,7 +21,7 @@ class ListController < ApplicationController
     if @list.save
       render json: @list, status: :success
     else
-      render json: @list.errors, status: :errors
+      render json: @list.errors, status: :bad_request
     end
   def destroy
     @list= List.find_by(params[:id])
