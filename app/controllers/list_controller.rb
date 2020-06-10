@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+ module APi
+  module v1
 class ListController < ApplicationController
   def index
    @lists =List.all
@@ -30,6 +33,8 @@ class ListController < ApplicationController
     else
       render json: @list.errors, status: :errors
     end
+  end
+  end
    end
   end
-end
+ end
