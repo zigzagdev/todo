@@ -1,6 +1,6 @@
 # frozen_string_literal: true
- module APi
-  module v1
+ module Api
+  module V1
 class ListController < ApplicationController
   def index
    @lists =List.all
@@ -26,6 +26,7 @@ class ListController < ApplicationController
     else
       render json: @list.errors, status: :bad_request
     end
+   end
   def destroy
     @list= List.find_by(params[:id])
     if @list.destroy
@@ -33,7 +34,6 @@ class ListController < ApplicationController
     else
       render json: @list.errors, status: :errors
     end
-  end
   end
    end
   end
