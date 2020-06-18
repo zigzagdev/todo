@@ -33,6 +33,13 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'factory_bot', '~> 5.2'
+  gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
+  gem 'rspec', '~> 3.9'
+  gem 'rspec-rails','~> 4.0', '>= 4.0.1'
+  gem 'rubocop', '~> 0.85.1'
+  gem 'rubocop-rspec', '~> 1.40'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

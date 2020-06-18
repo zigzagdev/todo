@@ -30,7 +30,7 @@ class ListController < ApplicationController
   def destroy
     @list= List.find_by(params[:id])
     if @list.destroy
-      render json: :@list, status: :destroied
+      render json: :@list, status: :destroy
     else
       render json: @list.errors, status: :errors
     end
