@@ -33,7 +33,7 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'factory_bot', '~> 5.2'
+  gem 'factory_bot_rails', '~> 6.0'
   gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
   gem 'rspec', '~> 3.9'
   gem 'rspec-rails','~> 4.0', '>= 4.0.1'
