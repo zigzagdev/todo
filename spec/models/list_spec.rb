@@ -16,7 +16,7 @@ RSpec.describe List, type: :model do
     content "list" do
       let(:list){list.new(title:"test title")}
 
-     it "エラーを返さない"do
+     it "エラーを返さない" do
         list.valid?
         expect(list.errorws[:title]).to be_brank
      end
