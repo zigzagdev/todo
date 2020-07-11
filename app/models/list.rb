@@ -3,7 +3,7 @@
 
 class List < ApplicationRecord
 
-  validates :name, presence: true, uniqueness: true
-  validates :content, presence: true, uniqueness: true
+  validates :name, presence: true
+  validates :content, presence: true
 
 end

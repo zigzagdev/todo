@@ -2,9 +2,9 @@
  require 'rails_helper'
 
 
-RSpec.describe API::V1::Listcontroller, type: :request do
- describe 'post/api/lists/:id' do
-   subject(:req) {post api_v1_lists_path, params: params, headers: headers }
+RSpec.describe API::V1::ListController, type: :request do
+ describe 'post/api/v1/list' do
+   subject(:req) {post api_v1_list_path, params: params, headers: headers }
    context 'when authenticated' do
      let(:headers) { {'Authorization'=> "Basic #{Base64.encode64('sample')}"} }
      let(:params)  { {id: 'test1'} }

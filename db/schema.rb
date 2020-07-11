@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_06_03_134836) do
 
   create_table "lists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.text "content"
+    t.string "name", null: false, comment: "投稿リスト"
+    t.text "content", null: false, comment: "投稿内容"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

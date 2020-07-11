@@ -7,7 +7,7 @@ class ListController < ApplicationController
   end
 
   def create
-    @list= List.new(id: params[:id])
+    @list= List.create
     if @list.save
       render json: @list, status: :created
     else
@@ -16,7 +16,7 @@ class ListController < ApplicationController
   end
 
   def edit
-    @list= List.find_by(url: params[:id])
+    @list= List.find_by(params[:id])
   end
 
   def update
@@ -35,6 +35,6 @@ class ListController < ApplicationController
       render json: @list.errors, status: :errors
     end
   end
-   end
-  end
  end
+   end
+   end
