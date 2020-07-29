@@ -2,7 +2,7 @@
  require 'rails_helper'
 
 
-RSpec.describe API::V1::ListController, type: :request do
+RSpec.describe Api::V1::ListsController, type: :request do
  describe 'post/api/v1/list' do
    subject(:req) {post api_v1_list_path, params: params, headers: headers }
    context 'when authenticated' do
