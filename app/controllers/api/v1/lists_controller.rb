@@ -11,7 +11,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list= List.new
+    @list= List.new(list_params)
     if @list.save
       render json: @list, status: :created
     else
@@ -38,6 +38,11 @@ class ListsController < ApplicationController
     else
       render json: @list.errors, status: :errors
     end
+  end
+
+  private
+  def list_params
+    params.permit(:name, :content)
   end
  end
    end
