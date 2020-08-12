@@ -18,15 +18,18 @@ class ListsController < ApplicationController
       render json: @list.errors, stasus: :errors
     end
   end
-
-  def edit
-    @list= List.find_by(params[:id])
-  end
-
+ def show
+   @list =List.find_by(params[:id])
+   if @list.save
+     render json: @list, status: :ok
+   else
+     render josn: @list, status: not_found
+   end
+ end
   def update
     @list= List.find_by(params[:id])
     if @list.save
-      render json: @list, status: :success
+      render json: @list, status: :ok
     else
       render json: @list.errors, status: :bad_request
     end
@@ -34,7 +37,7 @@ class ListsController < ApplicationController
   def destroy
     @list= List.find_by(params[:id])
     if @list.destroy
-      render json: :@list, status: :destroy
+      render json: :@list, status: :ok
     else
       render json: @list.errors, status: :errors
     end

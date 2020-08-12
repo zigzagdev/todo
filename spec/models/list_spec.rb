@@ -3,22 +3,27 @@
 require 'rails_helper'
 
 RSpec.describe List, type: :model do
-  describe "#title" do
-    context " " do
-      let(:list){list.new(title:" ")}
-
-     it "エラーを返す" do
-       list.valid?
-       expect(list.errors[:title]).to be_present
-       end
-    end
+  it do
+   list =List.new(
+     name: "佐藤太郎",
+     content: "テストです"
+   )
+   expect(list).to be_valid
   end
-    content "list" do
-      let(:list){list.new(title:"test title")}
 
-     it "エラーを返さない" do
-        list.valid?
-        expect(list.errorws[:title]).to be_brank
-     end
-    end
-end
+  it do
+    list =List.new(
+      name: " ",
+      content: "テストです"
+    )
+    expect(user.errors[:name]).to include("can't be blank")
+  end
+
+  it do
+    list =List.new(
+      name: "佐藤太郎",
+      content: " "
+    )
+    expect(user.errors[:content]).to include("can't be blank")
+
+
