@@ -25,5 +25,7 @@ RSpec.describe List, type: :model do
       content: " "
     )
     expect(user.errors[:content]).to include("can't be blank")
+  end
+ end
 
 
