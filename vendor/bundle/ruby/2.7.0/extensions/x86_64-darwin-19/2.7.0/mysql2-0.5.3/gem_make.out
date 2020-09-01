@@ -1,5 +1,5 @@
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.3/ext/mysql2
-/Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/bin/ruby -I /Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200603-52407-1a2l1b.rb extconf.rb --with-ldflags\=-L/usr/local/opt/openssl@1.1/lib
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.3/ext/mysql2
+/Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/bin/ruby -I /Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200826-31335-1xcsxqh.rb extconf.rb --with-ldflags\=-L/usr/local/opt/openssl@1.1/lib
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -27,10 +27,10 @@ Setting rpath to /usr/local/Cellar/mysql/8.0.19/lib
 -----
 creating Makefile
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.3/ext/mysql2
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.3/ext/mysql2
 make "DESTDIR=" clean
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.3/ext/mysql2
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.3/ext/mysql2
 make "DESTDIR="
 compiling client.c
 client.c:787:14: warning: incompatible pointer types passing 'VALUE (void *)' (aka 'unsigned long (void *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-pointer-types]
@@ -52,6 +52,6 @@ compiling result.c
 compiling statement.c
 linking shared-object mysql2/mysql2.bundle
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.3/ext/mysql2
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.3/ext/mysql2
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20200603-52407-oui98p/mysql2
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20200826-31335-z381hf/mysql2

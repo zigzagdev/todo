@@ -1,5 +1,5 @@
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.0/ext/ffi_c
-/Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/bin/ruby -I /Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200601-36540-1ca0zbl.rb extconf.rb
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.0/ext/ffi_c
+/Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/bin/ruby -I /Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200826-17260-196tgjf.rb extconf.rb
 checking for ffi_call() in -lffi... yes
 checking for ffi_closure_alloc()... yes
 checking for ffi_prep_cif_var()... yes
@@ -8,10 +8,10 @@ checking for ffi_prep_raw_closure()... yes
 creating extconf.h
 creating Makefile
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.0/ext/ffi_c
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.0/ext/ffi_c
 make "DESTDIR=" clean
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.0/ext/ffi_c
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.0/ext/ffi_c
 make "DESTDIR="
 compiling AbstractMemory.c
 compiling ArrayType.c
@@ -38,6 +38,6 @@ compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.0/ext/ffi_c
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.0/ext/ffi_c
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20200601-36540-z6k5gg
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20200826-17260-18kw1v2

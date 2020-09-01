@@ -23,7 +23,7 @@ class ListsController < ApplicationController
    if @list.save
      render json: @list, status: :ok
    else
-     render josn: @list, status: not_found
+     render json: @list, status: not_found
    end
  end
   def update
@@ -45,7 +45,7 @@ class ListsController < ApplicationController
 
   private
   def list_params
-    params.permit(:name, :content)
+     params.permit(:name, :content)
   end
  end
    end

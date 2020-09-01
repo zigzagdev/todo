@@ -1,5 +1,5 @@
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/puma-4.3.5/ext/puma_http11
-/Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/bin/ruby -I /Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200603-52407-thxc34.rb extconf.rb
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/puma-4.3.5/ext/puma_http11
+/Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/bin/ruby -I /Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200826-31335-16tztpw.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -8,10 +8,10 @@ checking for TLS_server_method() in openssl/ssl.h... yes
 checking for SSL_CTX_set_min_proto_version in openssl/ssl.h... yes
 creating Makefile
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/puma-4.3.5/ext/puma_http11
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/puma-4.3.5/ext/puma_http11
 make "DESTDIR=" clean
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/puma-4.3.5/ext/puma_http11
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/puma-4.3.5/ext/puma_http11
 make "DESTDIR="
 compiling http11_parser.c
 ext/puma_http11/http11_parser.c:44:18: warning: unused variable 'puma_parser_en_main' [-Wunused-const-variable]
@@ -35,6 +35,6 @@ puma_http11.c:203:22: note: include the header <ctype.h> or explicitly provide a
 1 warning generated.
 linking shared-object puma/puma_http11.bundle
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/puma-4.3.5/ext/puma_http11
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/puma-4.3.5/ext/puma_http11
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20200603-52407-gx9gsm/puma
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20200826-31335-17wyxhb/puma
