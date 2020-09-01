@@ -1,5 +1,5 @@
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
-/Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/bin/ruby -I /Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200601-36540-1wj7yfo.rb extconf.rb
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
+/Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/bin/ruby -I /Users/ogiwaramasatoshi/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200826-17260-4hy6yp.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... no
 checking for sys/select.h... yes
@@ -11,10 +11,10 @@ checking for port_event_t in port.h... no
 checking for sys/resource.h... yes
 creating Makefile
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR=" clean
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR="
 compiling bytebuffer.c
 compiling monitor.c
@@ -97,6 +97,6 @@ VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
 1 warning generated.
 linking shared-object nio4r_ext.bundle
 
-current directory: /Users/ogiwaramasatoshi/todo/list_make/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
+current directory: /Users/ogiwaramasatoshi/todo/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20200601-36540-4kytha
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20200826-17260-1828m5v
