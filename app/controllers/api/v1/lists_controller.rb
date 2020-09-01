@@ -39,7 +39,7 @@ class ListsController < ApplicationController
     if @list.destroy
       render json: :@list, status: :ok
     else
-      render json: @list.errors, status: :errors
+      render json: @list.errors, status: :bad_request
     end
   end
 
