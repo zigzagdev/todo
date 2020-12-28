@@ -5,10 +5,10 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import DeleteIcon from '@material-ui/icons/Delete';
-import PostModal from "./PostModal";
+import ListModal from "./ListModal";
 import EditForm from "./EditForm";
 
-class Post extends React.Component {
+class List extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -49,10 +49,10 @@ class Post extends React.Component {
             <Card>
             <CardContent>
             <Typography variant="h3" component="h3">
-            {this.props.post.title}
+            {this.props.list.title}
             </Typography>
             <Typography variant="body2">
-            {this.props.post.content}
+            {this.props.list.content}
             </Typography>
             </CardContent>
             <CardActions>
@@ -76,14 +76,14 @@ class Post extends React.Component {
         variant="contained"
         color="secondary"
         startIcon={<DeleteIcon/>}
-        onClick={(e) => this.props.onDelete(this.props.post.id, e)}
+        onClick={(e) => this.props.onDelete(this.props.list.id, e)}
     >
         DELETE
         </Button>
         </CardActions>
         </Card>
-        <PostModal
-        post={this.props.post}
+        <ListModal
+        list={this.props.list}
         open={this.state.modalOpen}
         onClose={this.handleToggleModalOpen}
         onDelete={this.props.onDelete}
@@ -91,7 +91,7 @@ class Post extends React.Component {
         />
         {this.state.editFormOpen &&
         <EditForm
-            post={this.props.post}
+            list={this.props.list}
             inputs={this.state.editFormInputs}
             onChange={this.handleInputChange}
             onSubmit={this.props.onUpdate}
@@ -102,4 +102,4 @@ class Post extends React.Component {
     }
 }
 
-export default Post;
+export default List;

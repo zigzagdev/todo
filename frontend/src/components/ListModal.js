@@ -32,16 +32,16 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function PostModal(props) {
+function ListModal(props) {
     const classes = useStyles();
     const modalStyle = getModalStyle();
 
     const body = (
         <div style={modalStyle} className={classes.paper}>
-        <h2>{props.post.title}</h2>
-        <p>{props.post.content}</p>
-        <p>作成日時: {props.post.created_at}</p>
-    <p>更新日時: {props.post.updated_at}</p>
+        <h2>{props.list.title}</h2>
+        <p>{props.list.content}</p>
+        <p>作成日時: {props.list.created_at}</p>
+    <p>更新日時: {props.list.updated_at}</p>
     <Grid container>
     <Grid item xs={4}>
         <Button
@@ -62,7 +62,7 @@ function PostModal(props) {
     variant="contained"
     color="secondary"
     startIcon={<DeleteIcon/>}
-    onClick={(e) => props.onDelete(props.post.id, e)}
+    onClick={(e) => props.onDelete(props.list.id, e)}
 >
     DELETE
     </Button>
@@ -90,4 +90,4 @@ function PostModal(props) {
 );
 }
 
-export default PostModal;
+export default ListModal;

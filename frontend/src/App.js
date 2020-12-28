@@ -3,22 +3,22 @@ import './App.css';
 import Box from "@material-ui/core/Box";
 import CreateForm from "./components/CreateForm";
 import Grid from "@material-ui/core/Grid";
-import Post from "./components/Post";
+import List from "./components/List";
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             createFormInputs: {
-                title: "",
+                name: "",
                 content: "",
             },
-            posts: [],
+            lists: [],
         }
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.handlePostSubmit = this.handlePostSubmit.bind(this);
-        this.handlePostDelete = this.handlePostDelete.bind(this);
-        this.handlePostUpdate = this.handlePostUpdate.bind(this);
+        this.handleListSubmit = this.handleListSubmit.bind(this);
+        this.handleListDelete = this.handleListDelete.bind(this);
+        this.handleListUpdate = this.handleListUpdate.bind(this);
     }
 
     get axios() {
@@ -34,11 +34,11 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.axios.get('')
+        this.axios.get('http://localhost:3002/api/v1/lists.json')
             .then(results => {
             console.log(results);
         this.setState({
-            posts: results.data
+            lists: results.data
         });
     })
     .catch(data => {
@@ -55,21 +55,21 @@ class App extends React.Component {
         });
     }
 
-    handlePostSubmit(e) {
+    handleListSubmit(e) {
         e.preventDefault();
         const inputValues = Object.values(this.state.createFormInputs);
 
         if (inputValues.every(value => value)) {
-            this.axios.post("/posts", {
-                post: this.state.createFormInputs,
+            this.axios.list("http://localhost:3002/api/v1/lists.json", {
+                list: this.state.createFormInputs,
             })
                 .then(res => {
-                const posts = this.state.posts.slice();
-            posts.push(res["data"]);
+                const lists = this.state.lists.slice();
+            lists.push(res["data"]);
             this.setState({
-                posts: posts,
+                lists: lists,
                 createFormInputs: {
-                    title: "",
+                    name: "",
                     content: "",
                 },
             });
@@ -80,18 +80,18 @@ class App extends React.Component {
         }
     }
 
-    handlePostDelete(id, e) {
+    handleListDelete(id, e) {
         e.preventDefault();
-        this.axios.delete(`/posts/${id}`)
+        this.axios.delete(`http://localhost:3002/api/v1/lists/${id}`)
             .then(res => {
-            const targetIndex = this.state.posts.findIndex(post => {
-                return post["id"] === res["data"]["id"]
+            const targetIndex = this.state.lists.findIndex(list => {
+                return list["id"] === res["data"]["id"]
             });
-        const posts = this.state.posts.slice();
-        posts.splice(targetIndex, 1);
+        const lists = this.state.lists.slice();
+        lists.splice(targetIndex, 1);
 
         this.setState({
-            posts: posts
+            lists: lists
         });
     })
     .catch(data => {
@@ -99,21 +99,21 @@ class App extends React.Component {
     });
     }
 
-    handlePostUpdate(id, inputs, e) {
+    handleListUpdate(id, inputs, e) {
         e.preventDefault();
         const inputValues = Object.values(inputs);
 
         if (inputValues.every(value => value)) {
-            this.axios.patch(`/posts/${id}`, {
-                post: inputs
+            this.axios.patch(`http://localhost:3002/api/v1/lists/${id}`, {
+                list: inputs
             })
                 .then(results => {
-                const posts = this.state.posts.slice();
-            const index = posts.findIndex(post => post["id"] === id);
-            posts.splice(index, 1, results["data"]);
+                const lists = this.state.lists.slice();
+            const index = lists.findIndex(list => list["id"] === id);
+            lists.splice(index, 1, results["data"]);
 
             this.setState({
-                posts: posts
+                lists: lists
             });
         })
         .catch(data => {
@@ -122,15 +122,15 @@ class App extends React.Component {
         }
     }
 
-    getPosts() {
+    getLists() {
         return (
-            this.state.posts.map((post) => {
+            this.state.lists.map((list) => {
                 return (
-            <Grid item xs={4} key={post.id}>
-            <Post
-        post={post}
-        onDelete={this.handlePostDelete}
-        onUpdate={this.handlePostUpdate}
+            <Grid item xs={4} key={list.id}>
+            <List
+        list={list}
+        onDelete={this.handleListDelete}
+        onUpdate={this.handleListUpdate}
         />
         </Grid>);
     })
@@ -144,11 +144,11 @@ class App extends React.Component {
             <CreateForm
         inputs={this.state.createFormInputs}
         onChange={this.handleInputChange}
-        onSubmit={this.handlePostSubmit}
+        onSubmit={this.handleListSubmit}
         />
         <Box p={3}>
             <Grid container spacing={4}>
-            {this.getPosts()}
+            {this.getLists()}
             </Grid>
             </Box>
             </Box>
