@@ -82,7 +82,7 @@ class App extends React.Component {
 
     handleListDelete(id, e) {
         e.preventDefault();
-        this.axios.delete(`http://localhost:3002/api/v1/lists/${id}`)
+        this.axios.delete(`http://localhost:3002/api/v1/lists.json/${id}`)
             .then(res => {
             const targetIndex = this.state.lists.findIndex(list => {
                 return list["id"] === res["data"]["id"]
@@ -104,7 +104,7 @@ class App extends React.Component {
         const inputValues = Object.values(inputs);
 
         if (inputValues.every(value => value)) {
-            this.axios.patch(`http://localhost:3002/api/v1/lists/${id}`, {
+            this.axios.patch(`http://localhost:3002/api/v1/lists.json/${id}`, {
                 list: inputs
             })
                 .then(results => {
