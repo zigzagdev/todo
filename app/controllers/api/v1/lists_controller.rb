@@ -24,17 +24,21 @@ class ListsController < ApplicationController
     end
   end
 
+  def show
+    @list=List.find(params[:id])
+  end
+
   def update
-    @list= List.find_by(params[:id])
+    @list= List.find(params[:id])
      if @list.save
-      render json: @list, status: :ok
+      render json: @list, status: :accepted
      else
       render json: @list.errors, status: :bad_request
      end
   end
 
   def destroy
-    @list= List.find_by(params[:id])
+    @list= List.find(params[:id])
     if @list.destroy
       render json: :@list, status: :ok
     else
